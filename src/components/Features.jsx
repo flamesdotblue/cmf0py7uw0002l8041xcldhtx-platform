@@ -63,6 +63,7 @@ export default function Features() {
               <li>• Target discovery with cross-omics literature synthesis.</li>
               <li>• Cohort prioritization and phenotype-driven search.</li>
               <li>• Rapid technical due diligence for partnerships and trials.</li>
+              <li>• Agrigenomics: Increase efficiency in crop varietal development via rapid marker discovery, trait-literature synthesis, and genotype–phenotype prioritization.</li>
             </ul>
           </div>
         </div>

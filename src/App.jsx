@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import AIEngine from './components/AIEngine';
 import HowItWorks from './components/HowItWorks';
 import Trust from './components/Trust';
 
@@ -10,6 +11,7 @@ export default function App() {
       <Hero />
       <main>
         <Features />
+        <AIEngine />
         <HowItWorks />
         <Trust />
       </main>
