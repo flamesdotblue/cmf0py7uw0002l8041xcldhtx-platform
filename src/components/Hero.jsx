@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Ensure Spline canvas is transparent (avoid any white background) */}
       <style dangerouslySetInnerHTML={{ __html: `#spline-cover canvas { background: transparent !important; }` }} />
 
-      {/* Subtle tint behind content only (center-focused radial gradient) */}
+      {/* Subtle tint behind content only (center-focused radial gradient + bottom fade) */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.58)_0%,rgba(0,0,0,0.45)_30%,rgba(0,0,0,0.28)_50%,transparent_70%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/50 to-transparent" />
