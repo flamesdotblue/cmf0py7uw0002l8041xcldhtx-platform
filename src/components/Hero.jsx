@@ -5,10 +5,12 @@ import { Rocket, ShieldCheck } from 'lucide-react';
 export default function Hero() {
   return (
     <section className="relative h-[92vh] w-full overflow-hidden bg-black text-white">
-      {/* Full-bleed Spline cover (no tint) */}
-      <div className="absolute inset-0">
+      {/* Full-bleed Spline cover, non-interactive */}
+      <div id="spline-cover" className="pointer-events-none absolute inset-0">
         <Spline scene="https://prod.spline.design/D17NpA0ni2BTjUzp/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
+      {/* Force Spline canvas to be transparent to avoid any whitish background */}
+      <style dangerouslySetInnerHTML={{ __html: `#spline-cover canvas { background: transparent !important; }` }} />
 
       {/* Top navigation */}
       <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 pt-6">
