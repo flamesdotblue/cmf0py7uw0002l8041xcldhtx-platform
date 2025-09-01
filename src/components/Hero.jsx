@@ -4,16 +4,11 @@ import { Rocket, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative h-[92vh] w-full overflow-hidden bg-black">
-      {/* Spline as full-bleed cover */}
-      <div className="absolute inset-0">
+    <section className="relative h-[92vh] w-full overflow-hidden bg-black text-white">
+      {/* Spline only on the right half, no tint */}
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-1/2 overflow-hidden">
         <Spline scene="https://prod.spline.design/D17NpA0ni2BTjUzp/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
-
-      {/* Left-to-right dark overlay so asset is emphasized on the right half */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" style={{ maskImage: 'linear-gradient(to right, black 0%, black 55%, transparent 70%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, black 0%, black 55%, transparent 70%, transparent 100%)' }} />
-      {/* Subtle bottom fade for contrast */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
 
       <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 pt-6">
         <div className="flex items-center gap-3">
@@ -34,7 +29,7 @@ export default function Hero() {
         </div>
       </nav>
 
-      {/* Content aligned to the left half */}
+      {/* Left-side content */}
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-start justify-center px-6 pb-24">
         <div className="max-w-xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1 text-xs text-white/80 backdrop-blur">
