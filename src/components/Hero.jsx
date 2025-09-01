@@ -9,8 +9,14 @@ export default function Hero() {
       <div id="spline-cover" className="pointer-events-none absolute inset-0">
         <Spline scene="https://prod.spline.design/D17NpA0ni2BTjUzp/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
-      {/* Force Spline canvas to be transparent to avoid any whitish background */}
+      {/* Ensure Spline canvas is transparent (avoid any white background) */}
       <style dangerouslySetInnerHTML={{ __html: `#spline-cover canvas { background: transparent !important; }` }} />
+
+      {/* Subtle tint behind content only (center-focused radial gradient) */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.58)_0%,rgba(0,0,0,0.45)_30%,rgba(0,0,0,0.28)_50%,transparent_70%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/50 to-transparent" />
+      </div>
 
       {/* Top navigation */}
       <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 pt-6">
